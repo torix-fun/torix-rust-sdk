@@ -1,0 +1,13 @@
+[package]
+name = "torix-rust-sdk"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+solana-pubkey = { version = "4.2.0", features = ["curve25519"] }
+spl-token-2022-interface = "3.0.1"
+spl-associated-token-account-interface = "2.0.0"
+
+[features]
+default = ["pda"]
+pda = []

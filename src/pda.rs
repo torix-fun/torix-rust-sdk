@@ -55,3 +55,12 @@ pub fn derive_curve_token_account(curve: &Pubkey, mint: &Pubkey) -> Pubkey {
         &SPL_ATA_PROGRAM_ID,
     ).0
 }
+
+pub fn derive_global_config() -> Pubkey {
+    Pubkey::find_program_address(
+        &[
+            GLOBAL_CONFIG_SEED.as_ref()
+        ], 
+        &TORIX_PROGRAM_ID
+    ).0
+}
